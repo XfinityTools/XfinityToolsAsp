@@ -1,242 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile and desktop -->
+    <meta name="description" content="Protect your PDFs with ease! Our powerful PDF watermarking tool allows you to add custom watermarks, copyright notices, and logos to safeguard your documents. Preserve your ownership and enhance security effortlessly"> <!-- Page description for SEO -->
+    <!-- Canonical link for SEO -->
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/PDF-WaterMark" />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../Images/Untitled design.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
-    <meta name="description" content="Protect your PDFs with ease! Our powerful PDF watermarking tool allows you to add custom watermarks, copyright notices, and logos to safeguard your documents. Preserve your ownership and enhance security effortlessly">
-    <script src="JS/pdf-lib.min.js"></script>
-    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
-    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
-    <script src="https://unpkg.com/downloadjs@1.4.7"></script>
-    <script src="https://unpkg.com/pdf-lib@1.11.0"></script>
-    <script src="https://unpkg.com/pdf-lib@1.14.0"></script>
-    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
-    <script src="https://unpkg.com/pdf-lib@1.7.0"></script>
-    <script src="pdf.min.js"></script>
-    <script src="pdf.worker.min.js"></script>
-    <script src="https://unpkg.com/pdf-lib"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet"> <!-- Custom fonts -->
+    <!-- External CSS -->
     <link href="../Pages/Css/StyleSheet1.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Pages/Css/PDFWatermark.css" rel="stylesheet" />
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+
+    <!-- JavaScript Libraries -->
+    <script src="JS/pdf-lib.min.js"></script> <!-- PDF-lib library -->
+    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script> <!-- Mozilla PDF.js library -->
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script> <!-- PDF-lib v1.4.0 -->
+    <script src="https://unpkg.com/downloadjs@1.4.7"></script> <!-- Download.js library -->
+    <script src="https://unpkg.com/pdf-lib@1.11.0"></script> <!-- PDF-lib v1.11.0 -->
+    <script src="https://unpkg.com/pdf-lib@1.14.0"></script> <!-- PDF-lib v1.14.0 -->
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script> <!-- PDF-lib fontkit -->
+    <script src="https://unpkg.com/pdf-lib@1.7.0"></script> <!-- PDF-lib v1.7.0 -->
+    <script src="pdf.min.js"></script> <!-- Local PDF.js library -->
+    <script src="pdf.worker.min.js"></script> <!-- Local PDF worker -->
+    <script src="https://unpkg.com/pdf-lib"></script> <!-- Latest PDF-lib library -->
+    <!-- Custom JavaScript -->
+    <script src="../Pages/JS/JavaS4.js"></script> <!-- Custom JS file -->
+
+
     <title>PDF Watermark</title>
-    <style>
-
-        .span-hide {
-            display: none;
-        }
-
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: flex-start;
-            width: 95%;
-        }
-
-        .drop-area {
-            width: 130px;
-            height: 50px;
-            border: 2px dashed #ccc;
-            border-radius: 5px;
-            text-align: center;
-            padding: 40px;
-            cursor: pointer;
-        }
-
-            .drop-area.highlight {
-                border-color: #009688;
-            }
-
-        .preview-container {
-            /* border: 1px solid #ccc; */
-            padding: 10px;
-            width: 50.5%;
-            border-left: 3px dashed;
-        }
-
-        .preview {
-            width: 100%;
-            height: 600px;
-        }
-
-
-        @media (max-width: 768px) {
-            .cpreview-container {
-                width: auto;
-            }
-        }
-
-
-        /* Styles for the range input */
-        input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 74%;
-            height: 10px;
-            background-color: #e9e9e9;
-            /* border-radius: 5px; */
-            /* outline: none; */
-            padding: 0;
-            margin: 0;
-        }
-
-            input[type="range"]::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                appearance: none;
-                width: 10px;
-                height: 20px;
-                background-color: #fff;
-                border: 2px solid #999;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: background-color 0.2s, transform 0.2s;
-            }
-
-            input[type="range"]::-moz-range-thumb {
-                width: 20px;
-                height: 20px;
-                background-color: #fff;
-                border: 2px solid #999;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: background-color 0.2s, transform 0.2s;
-            }
-
-                input[type="range"]::-webkit-slider-thumb:hover,
-                input[type="range"]::-moz-range-thumb:hover {
-                    background-color: #999;
-                }
-
-                input[type="range"]::-webkit-slider-thumb:active,
-                input[type="range"]::-moz-range-thumb:active {
-                    transform: scale(1.2);
-                }
-
-            /* Style the range track */
-            input[type="range"]::-webkit-slider-runnable-track {
-                height: 4px;
-                background-color: #ccc;
-                border-radius: 2px;
-            }
-
-            input[type="range"]::-moz-range-track {
-                height: 4px;
-                background-color: #ccc;
-                border-radius: 2px;
-            }
-
-
-        /* Style for the color input */
-        input[type="color"] {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 4%;
-            height: 13px;
-            padding: 0;
-            margin: 0;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-            /* Remove default color input arrow */
-            input[type="color"]::-webkit-color-swatch-wrapper {
-                padding: 0;
-            }
-
-            /* Style the color input swatch */
-            input[type="color"]::-webkit-color-swatch {
-                border: none;
-                border-radius: 4px;
-            }
-
-        select {
-            appearance: none;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #fff;
-            color: #333;
-            font-size: 16px;
-            outline: none;
-            cursor: pointer;
-        }
-
-            select:hover {
-                border-color: #aaa; /* Change this to your desired hover color */
-            }
-
-            select:focus {
-                border-color: #ff7f50; /* Change this to your desired focus color */
-                box-shadow: 0 0 5px rgba(255, 127, 80, 0.5); /* Change this to your desired focus box shadow */
-            }
-
-            select option {
-                background-color: #fff;
-                color: #333;
-            }
-
-        button {
-            display: inline-block;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 4px;
-            background-color: #E36587; /* Change this to your desired background color */
-            color: #fff; /* Change this to your desired text color */
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-            button:hover {
-                background-color: #ff6347; /* Change this to your desired hover background color */
-            }
-
-            button:focus {
-                outline: none;
-                box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5); /* Change this to your desired focus box shadow */
-            }
-
-            button:active {
-                transform: translateY(1px);
-            }
-
-        .download-button-watermark {
-            display: inline-block;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            background-color: green; /* Change this to your desired background color */
-            color: #fff; /* Change this to your desired text color */
-            font-size: 16px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-            .download-button-watermark:hover {
-                background-color: greenyellow; /* Change this to your desired hover background color */
-            }
-
-            .download-button-watermark:focus {
-                outline: none;
-                box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5); /* Change this to your desired focus box shadow */
-            }
-
-            .download-button-watermark:active {
-                transform: translateY(1px);
-            }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@3.0.0/dist/pdf-lib.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/pdf-lib@3.0.0/dist/pdf-lib.js"></script>
 </head>
 <body>
     <div class="header">
@@ -435,6 +237,5 @@
 </footer>
 <!-- Footer section ends here -->
 
-<script src="JS/JavaS4.js"></script>
 </body>
 </html>

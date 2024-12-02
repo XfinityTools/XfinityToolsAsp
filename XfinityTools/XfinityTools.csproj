@@ -155,6 +155,7 @@
     <Content Include="Content\Card.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Disclaimer.html" />
+    <Content Include="Pages\Css\PDFWatermark.css" />
     <Content Include="Pages\Css\style1.css" />
     <Content Include="Pages\Css\StyleSheet1.css" />
     <Content Include="Pages\Dashboards\Dashboard.html" />

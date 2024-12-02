@@ -1,4 +1,42 @@
-﻿/* General Reset */
+﻿#SearchBarAndPageSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between the search bar and page selector */
+    margin: 20px auto;
+}
+
+#searchBar {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+    #searchBar:focus {
+        border-color: #007bff; /* Highlight border on focus */
+    }
+
+#pageSelector {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    #pageSelector:hover {
+        border-color: #007bff; /* Highlight border on hover */
+    }
+
+
+
+
+
+/* General Reset */
 * {
     margin: 0;
     padding: 0;

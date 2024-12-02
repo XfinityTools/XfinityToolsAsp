@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="description" content="Xfinity Tools is a comprehensive collection of web-based tools designed to simplify various tasks and enhance your productivity. Our aim is to provide you with a one-stop destination for quick and efficient online utilities.
@@ -17,28 +16,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./Pages/JS/JavaS1.js"></script>
     <script src="./Pages/JS/DropDownMenu.js"></script>
+    <script src="./Pages/JS/search.js"></script>
     <link href="./Pages/Css/Bootstrap.css" rel="stylesheet" />
     <link href="./Pages/Css/index-style.css" rel="stylesheet" />
     <link href="Pages/Css/Dashboard.css" rel="stylesheet" />
-    
-    
+
+
 
     <title>Xfinity Tools - Tools Dashboard</title>
 </head>
 <body>
-    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="header" style="display: flex; justify-content: space-between; ">
         <a href="/"><h1 style="margin-left: 50px;">Xfinity Tools</h1></a>
 
-        <div class="dropdown" style="position: relative; display: inline-block; margin-right: 40px;">
-            <button class="dropbtn" style="background-color: transparent; border: none; font-size: 18px; cursor: pointer;">
-            </button>
-            <div class="dropdown-content" style="display: none; position: absolute; background-color: white; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); min-width: 150px; z-index: 1;">
-                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Profile</a>
-                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Settings</a>
-                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Logout</a>
-            </div>
-        </div>
+
+        <a style="margin-left:750px;" href="Dashboard.html">Tools Dashboard P2</a>
+
+
+
     </div>
+
+    <div id="SearchBarAndPageSelector" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+
+        <!-- Search Bar -->
+        <input type="text"
+               id="searchBar"
+               placeholder="Search Tools" style="padding: 9px; width: 250px; border: 2px solid #e60340; border-radius: 5px; font-size: 12px; color:black;" />
+
+        <!-- Page Selector -->
+        <select id="pageSelector"
+                style="padding: 9px; border: 2px solid #e60340; border-radius: 5px; font-size: 12px; color: black;"
+                onchange="navigateToPage()">
+            <option value="1">Page 1</option>
+            <option value="2">Page 2</option>
+
+            <option value="3">Page 3</option>
+            <!--<option value="4">Page 4</option>-->
+        </select>
+    </div>
+
 
     <div class="row">
         <section id="FileZipper" class="col-md-4 card-dash">
@@ -59,7 +75,7 @@
                 A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
             </p><br />
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Use &raquo;</a>
             </p>
         </section>
 
@@ -70,53 +86,18 @@
                 A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
             </p><br />
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Use &raquo;</a>
             </p>
         </section>
 
     </div>
-    
-    <div class="row">
-        <section id="FileZipper" class="col-md-4 card-dash">
-            <h2>File Zipper</h2>
-            <p>
-                Creating a zip file involves compressing one or more files or directories into a single archive file with the ".zip" extension. The process of creating a zip file helps reduce
-                file size and makes it easier to store, transfer, and organize multiple files together.
-            </p><br />
-            <p>
-                <a class="btn btn-default" href="Tools/ZipFile.aspx">Use &raquo;</a>
-            </p>
-        </section>
 
-        <section id="PNGtoJPEG" class="col-md-4 card-dash">
-            <h2>PNG to JPEG</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p><br />
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </section>
 
-        <section id="WebptoPNG" class="col-md-4 card-dash">
-            <h2>WebP to PNG</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p><br />
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </section>
-
-    </div>
-    
 
 
     <!-- Footer -->
-    <hr style="width:100%;" />
-    <footer style="padding: 15px; margin-top: 30px; margin-left: 55px;">
+    <hr style="width:100%; align-items:end; border:.05px solid black;" />
+    <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
         <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
         <script>
             document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -125,3 +106,4 @@
     </footer>
 </body>
 </html>
+

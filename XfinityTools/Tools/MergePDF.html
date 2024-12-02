@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="JS/JavaS1.js"></script>
+    <link rel="icon" type="image/x-icon" href="../Images/Untitled design.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <link href="../Pages/Css/StyleSheet1.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Merger</title>
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.10.0/dist/pdf-lib.js"></script>
+    <meta name="description" content="Free Online Tool that allows you to merge multiple PDF documents into a single PDF file.">
+
+</head>
+<body>
+    
+    <div class="header">
+        <a href="../index.html" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 110%;">PDF Merger</p>
+    </div>
+<br><br><br><br>
+  <div class="container">
+    
+    <div class="main-content">
+        <div >
+           
+            <div id="dropArea" onclick="fileInput.click()">
+              <p>Click or drag and drop PDF files here</p>
+              <input type="file" id="fileInput" multiple accept=".pdf" onchange="handleFileSelection(event)">
+            </div><br>
+            <!-- <button class="download-button" id="mergeBtn" onclick="handleMergeButtonClick()">Merge PDFs</button> -->
+          </div>
+    </div>
+ 
+  </div><br>
+
+  <div class="container-infobox-left">
+    <p>The PDF Merge tool is a web-based utility that allows you to merge multiple PDF documents into a single PDF file. With this tool, you can conveniently combine and merge PDF files to create a unified document.</p>
+
+    <br>
+    <p> <h2>Instructions:</h2>
+        <ol>
+          <li>
+            <h3>Accessing the Tool:</h3>
+            <p>Open your web browser and navigate to the URL where the PDF Merge tool is hosted.</p>
+          </li>
+          <li>
+            <h3>Uploading PDF Files:</h3>
+            <p>There are two ways to select PDF files for merging:</p>
+            <ul>
+              <li>Drag and Drop: Simply drag and drop your PDF files onto the designated drop area within the tool's interface.</li>
+              <li>File Browser: Alternatively, you can click on the drop area, which will open the file manager. Browse and select the desired PDF files from your local storage.</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Merging PDF Files:</h3>
+            <p>After selecting the PDF files, the tool will automatically start merging them into a single PDF file.</p>
+            <p>The merging process may take a few moments depending on the size and number of the selected files.</p>
+          </li>
+          <li>
+            <h3>Download the Merged PDF File:</h3>
+            <p>Once the merging process is complete, the tool will generate a merged PDF file.</p>
+            <p>A download link will be provided or the file may be automatically downloaded.</p>
+            <p>Click on the download link or locate the merged PDF file in your browser's download location to access the merged PDF document.</p>
+          </li>
+          <li>
+            <h3>Repeat the Process:</h3>
+            <p>If you need to merge additional PDF files, you can repeat the steps above to select and merge new PDF files.</p>
+            <p>Each time you perform a merge, a new merged PDF file will be generated, so ensure you save or rename the merged files appropriately to avoid confusion.</p>
+          </li>
+        </ol></p>
+  </div><br>
+
+  <hr  width="70%">
+<!-- Footer section starts here -->
+<footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+  <div class="footer-container" style="display: flex; justify-content: space-between;">
+    <!-- Info Div -->
+    <div class="info-div" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+      
+      
+    </div>
+
+    <!-- Other Tools Div -->
+    <div class="other-tools-div" style="flex: 1; max-width: 400px;">
+      
+      <!-- <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center;">
+        
+        <table style="">
+          <tr>
+            <td>
+              <li ><a href="Zipfile">File Zipper</a></li> 
+            </td>
+            <td>
+               <li><a href="MergePDF">PDF Merger</a></li>
+            </td>
+          </tr>
+          <tr>
+            
+           
+          </tr>
+        </table>
+       
+        
+        
+      </ul> -->
+      <p style="display: inline-block">&copy; 2024 Xfinity Tools. All rights reserved.</p>
+    </div>
+
+    <!-- Empty Div -->
+    <div class="empty-div" style="flex: 1;">
+      
+    </div>
+  </div>
+</footer>
+<!-- Footer section ends here -->
+    
+</body>
+
+
+<style>
+  #fileInput {
+  display: none;
+}
+</style>
+
+</html>

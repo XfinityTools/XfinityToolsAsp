@@ -17,9 +17,10 @@
     <script src="./Pages/JS/JavaS1.js"></script>
     <script src="./Pages/JS/DropDownMenu.js"></script>
     <script src="./Pages/JS/search.js"></script>
-    <link href="./Pages/Css/Bootstrap.css" rel="stylesheet" />
-    <link href="./Pages/Css/index-style.css" rel="stylesheet" />
-    <link href="Pages/Css/Dashboard.css" rel="stylesheet" />
+    <link href="../Css/Bootstrap.css" rel="stylesheet" />
+    <link href="../Css/index-style.css" rel="stylesheet" />
+    <link href="../Css/Dashboard.css" rel="stylesheet" />
+
 
 
 
@@ -49,7 +50,6 @@
                 onchange="navigateToPage()">
             <option value="1">Page 1</option>
             <option value="2">Page 2</option>
-
             <option value="3">Page 3</option>
             <!--<option value="4">Page 4</option>-->
         </select>
@@ -57,33 +57,30 @@
 
 
     <div class="row">
-        <section id="FileZipper" class="col-md-4 card-dash">
-            <h2>File Zipper</h2>
+        <section id="PDFMerger" class="col-md-4 card-dash">
+            <h2>PDF Merger</h2>
             <p>
-                Creating a zip file involves compressing one or more files or directories into a single archive file with the ".zip" extension. The process of creating a zip file helps reduce
-                file size and makes it easier to store, transfer, and organize multiple files together.
+                PDF merging refers to the process of combining multiple PDF (Portable Document Format) documents into a single PDF file. This merging operation is useful when you want to consolidate several related PDF files or create a cohesive document from separate PDFs
             </p><br />
             <p>
-                <a class="btn btn-default" href="Tools/ZipFile.aspx">Use &raquo;</a>
+                <a class="btn btn-default" href="../../Tools/MergePDF.html">Use &raquo;</a>
             </p>
         </section>
 
-        <section id="PNGtoJPEG" class="col-md-4 card-dash">
-            <h2>PNG to JPEG</h2>
+        <section id="PDFWatermark" class="col-md-4 card-dash">
+            <h2>PDF Watermark</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                PDF watermarking refers to the process of adding visible or invisible markings or overlays onto a PDF document. These markings typically contain text, images, logos, or patterns that are superimposed on each page of the PDF. The purpose of watermarking is to identify the document's origin, protect its authenticity, or indicate its confidentiality.
             </p><br />
             <p>
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Use &raquo;</a>
             </p>
         </section>
 
-        <section id="WebptoPNG" class="col-md-4 card-dash">
-            <h2>WebP to PNG</h2>
+        <section id="ExceltoPDF" class="col-md-4 card-dash">
+            <h2>Excel to PDF</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                Converting Excel to PDF involves transforming an Excel spreadsheet file (.xlsx) into a PDF document format. This conversion process allows you to preserve the content, formatting, and layout of the Excel file while making it easily shareable, printable, and viewable across different platforms and devices.
             </p><br />
             <p>
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Use &raquo;</a>
@@ -92,18 +89,58 @@
 
     </div>
 
+    <div class="row">
+        <section id="FileCompression" class="col-md-4 card-dash">
+            <h2>File Compression</h2>
+            <p>
+                File compression is a process of reducing the size of one or more files, often referred to as the "source files,"
+                to save storage space and improve data transfer efficiency. The compressed files are created in a format that
+                requires less disk space compared to the original files, making them more manageable for storage and faster to
+                transfer over networks.
+            </p><br />
+            <p>
+                <a class="btn btn-default" href="../../Tools/MergePDF.html">Use &raquo;</a>
+            </p>
+        </section>
+    </div>
 
 
 
-    <!-- Footer -->
-    <hr style="width:100%; align-items:end; border:.05px solid black;" />
-    <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
-        <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
-        <script>
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        </script>
 
-    </footer>
+        <!-- Footer -->
+        <hr style="width:100%; align-items:end; border:.05px solid black;" />
+        <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
+            <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+            </script>
+
+        </footer>
 </body>
 </html>
+
+<script>
+    function navigateToPage() {
+        const selector = document.getElementById("pageSelector");
+        const page = selector.value;
+
+        // Define the URL for each page
+        switch (page) {
+            case "1":
+                window.location.href = "Dashboard.html";
+                break;
+            case "2":
+                window.location.href = "Dashboard2.html";
+                break;
+            case "3":
+                window.location.href = "page3.html";
+                break;
+            case "4":
+                window.location.href = "page4.html";
+                break;
+            default:
+                alert("Please select a valid page.");
+        }
+    }
+</script>
 

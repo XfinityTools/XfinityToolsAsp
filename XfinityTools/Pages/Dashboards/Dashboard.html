@@ -18,9 +18,9 @@
     <script src="./Pages/JS/JavaS1.js"></script>
     <script src="./Pages/JS/DropDownMenu.js"></script>
     <script src="./Pages/JS/search.js"></script>
-    <link href="./Pages/Css/Bootstrap.css" rel="stylesheet" />
-    <link href="./Pages/Css/index-style.css" rel="stylesheet" />
-    <link href="Pages/Css/Dashboard.css" rel="stylesheet" />
+    <link href="../Css/Bootstrap.css" rel="stylesheet" />
+    <link href="../Css/index-style.css" rel="stylesheet" />
+    <link href="../Css/Dashboard.css" rel="stylesheet" />
 
 
 
@@ -28,7 +28,7 @@
 </head>
 <body>
     <div class="header" style="display: flex; justify-content: space-between; ">
-        <a href="/"><h1 style="margin-left: 50px;">Xfinity Tools</h1></a>
+        <a href="../../index.html"><h1 style="margin-left: 50px;">Xfinity Tools</h1></a>
 
         <a style="margin-left:750px;" href="Dashboard.html">Tools Dashboard</a>
 
@@ -62,65 +62,65 @@
                 file size and makes it easier to store, transfer, and organize multiple files together.
             </p><br />
             <p>
-                <a class="btn btn-default" href="Tools/ZipFile.aspx">Use &raquo;</a>
+                <a class="btn btn-default" href="../../Tools/Zipfile.html">Use &raquo;</a>
             </p>
         </section>
 
         <section id="PNGtoJPEG" class="col-md-4 card-dash">
             <h2>PNG to JPEG</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                Converting a PNG file to JPEG involves transforming the image file format from PNG (Portable Network Graphics) to JPEG (Joint Photographic Experts Group).
+                This conversion can be useful in certain scenarios where JPEG format is preferred over PNG, such as reducing file size or compatibility requirements.
             </p><br />
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Use &raquo;</a>
+                <a class="btn btn-default" href="../../Tools/Png-Jpeg.html">Use &raquo;</a>
             </p>
         </section>
 
         <section id="WebptoPNG" class="col-md-4 card-dash">
             <h2>WebP to PNG</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                Converting a WebP file to PNG involves changing the image file format from WebP (a modern image format developed by Google) to PNG (Portable Network Graphics).
+                This conversion can be useful in situations where PNG format is preferred over WebP, such as compatibility requirements or the need for lossless compression.
             </p><br />
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Use &raquo;</a>
+                <a class="btn btn-default" href="../../Tools/WebP-Png.html">Use &raquo;</a>
             </p>
         </section>
 
     </div>
 
     <div class="row">
-        <section id="FileZipper" class="col-md-4 card-dash">
-            <h2>File Zipper</h2>
+        <section id="PNGtoWebP" class="col-md-4 card-dash">
+            <h2>PNG to WebP</h2>
             <p>
-                Creating a zip file involves compressing one or more files or directories into a single archive file with the ".zip" extension. The process of creating a zip file helps reduce
-                file size and makes it easier to store, transfer, and organize multiple files together.
+                Converting a PNG to WebP file involves changing the image file format from PNG (Portable Network Graphics) to WebP (a modern image format developed by Google).
+                This conversion can be useful in situations where PNG format is preferred over WebP, such as compatibility requirements or the need for lossless compression
             </p><br />
             <p>
-                <a class="btn btn-default" href="Tools/ZipFile.aspx">Use &raquo;</a>
+                <a class="btn btn-default" href="../../Tools/Png-Webp.html">Use &raquo;</a>
             </p>
         </section>
 
-        <section id="PNGtoJPEG" class="col-md-4 card-dash">
-            <h2>PNG to JPEG</h2>
+        <section id="SentenceCapitalization" class="col-md-4 card-dash">
+            <h2>Sentence Capitalization</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                When an entire sentence is capitalized, it means that all the letters in the sentence are written in uppercase, without any lowercase letters.
+                This style is often used in informal writing, online communication, or to convey emphasis or urgency.
             </p><br />
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Use &raquo;</a>
+                <a class="btn btn-default" href="../../Tools/SentenceCap.html">Use &raquo;</a>
             </p>
         </section>
 
-        <section id="WebptoPNG" class="col-md-4 card-dash">
-            <h2>WebP to PNG</h2>
+        <section id="CamelCaseConversion" class="col-md-4 card-dash">
+            <h2>Camel Case Conversion</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
+                Camel case conversion is a naming convention used in computer programming and other contexts where multiple words are combined to form a single identifier.
+                In camel case, each word in the identifier is written without spaces, and the first letter of each word, except the first word, is capitalized.
             </p><br />
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Use &raquo;</a>
+                <a class="btn btn-default" href="../../Tools/CamCase.html">Use &raquo;</a>
             </p>
         </section>
 
@@ -139,4 +139,29 @@
     </footer>
 </body>
 </html>
+
+<script>
+    function navigateToPage() {
+        const selector = document.getElementById("pageSelector");
+        const page = selector.value;
+
+        // Define the URL for each page
+        switch (page) {
+            case "1":
+                window.location.href = "Dashboard.html";
+                break;
+            case "2":
+                window.location.href = "Dashboard2.html";
+                break;
+            case "3":
+                window.location.href = "page3.html";
+                break;
+            case "4":
+                window.location.href = "page4.html";
+                break;
+            default:
+                alert("Please select a valid page.");
+        }
+    }
+</script>
 

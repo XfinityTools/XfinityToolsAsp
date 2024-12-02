@@ -1,0 +1,363 @@
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+input[type=file]::file-selector-button {
+  /* margin-right: 20px; */
+  border: none;
+  background: #084cdf;
+  padding: 10px 20px;
+ 
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+ 
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+input[type=file],.file-input{
+  background-color: transparent;
+  border: 1px transparent ;
+}
+
+
+.drop-area-excel {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  width: 95%;
+  height: 200px;
+  background-image: url('excel-symbol.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px;
+}
+.drop-area-excel.active {
+  border-color: #007bff;
+}
+
+
+
+  .controls {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+.drop-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#dropArea {
+  width: 100%;
+  height: 250px;
+  border: 2px dashed gray;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+#dropArea.dragover {
+  background-color: #f2f2f2;
+}
+#dropArea-png-webp{
+  width: 90%;
+}
+
+.container-infobox{
+    /* display: flex; */
+    max-width: 900px;
+    
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+   
+}
+
+.container-infobox-left{
+  /* display: flex; */
+  max-width: 900px;
+  
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 2px;
+ 
+  padding: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: left;
+ 
+}
+
+.container-infobox-article{
+  /* display: flex; */
+  max-width: 900px;
+  
+  /* margin: 0 auto; */
+  margin-left: 10%;
+  background-color: #fff;
+  border-radius: 2px;
+ 
+  padding: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: left;
+  min-width:100px;
+ 
+}
+
+
+
+
+
+.container-infobox-right{
+  /* display: flex; */
+  min-width:100px;
+  
+  margin-right: 5%;
+  margin-top: 5%;
+  float: right;
+  display: inline-block;
+  
+  border-radius: 2px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: right;
+ 
+}
+
+.zoom:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+    ;
+    
+   }
+
+/* a:hover{
+    color: #E36587;
+} */
+
+
+.hover-red:hover{
+    color: #E36587;
+  }
+
+.utilities{
+    /* text-decoration: none; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    
+  }
+
+.utilities:hover{
+    
+  }
+
+.hover-red:hover{
+    color: #E36587;
+  }
+
+.input{
+  position: relative;
+  width: 95%;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px  #BBB;
+  text-align: center;
+  background-color: #DDD;
+  cursor: pointer;
+  border-radius: 5px 5px;
+  height: auto;
+  line-height: 2;
+  }
+
+  .inputcam{
+  top: 10%;
+  /* left: 10%; */
+  position: relative;
+  width: 85%;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px  #BBB;
+  text-align: center;
+  background-color: #DDD;
+  cursor: pointer;
+  border-radius: 5px 5px;
+  height: auto;
+  line-height: 3;
+  }
+
+  input:hover{
+    background-color: #e66788;
+    
+  }
+
+  .result{
+    position: relative;
+  width:200px;
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  /* border: 1px  #BBB; */
+  /* background-color: #DDD; */
+  /* cursor: pointer; */
+  border-radius: 2px 2px;
+  border: 2px solid;
+  }
+
+  /* .resultcam{
+    width:200px;
+    position: relative;
+    top: 130px;
+    left: 5%;
+    border: 1px solid;
+
+  } */
+
+canvas{
+  left: 30px;;
+}
+
+  /* Header styles */
+  .header {
+    background-color: #e60340;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+  }
+
+  /* Container styles */
+  .container {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .container-watermark {
+    display: flex;
+    max-width: 75%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 700px;
+    overflow: none;
+    flex-direction: column;
+    padding: 10px;
+    max-height: 3000px;
+  }
+
+  /* Sidebar styles */
+  .sidebar {
+    flex: 0 0 200px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  /* Main content styles */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+
+  /* Heading styles */
+  h1 {
+    text-align: center;
+  }
+
+  .div-left{
+    text-align: left;
+  }
+
+  /* File input styles */
+  .file-input {
+    margin-bottom: 10px;
+    display: inline-block;
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  border: 2px solid #ddd;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  }
+
+  .file-name {
+  display: inline-block;
+  margin-left: 10px;
+  color: #666;
+}
+
+.custom-file-input + .file-name {
+  display: none;
+}
+
+  .custom-file-input:hover {
+  background-color: #e0e0e0;
+}
+
+  /* Download button styles */
+  .download-button {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .download-button:hover {
+    background-color: #45a049;
+  }
+
+  /* File list styles */
+  #fileList {
+    margin-top: 10px;
+    list-style-type: none;
+  }
+
+  /* Reset default styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }

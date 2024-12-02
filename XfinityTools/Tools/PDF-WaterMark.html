@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://xfinitytools.github.io/Pages/PDF-WaterMark" />
+    <link rel="icon" type="image/x-icon" href="../Images/Untitled design.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
+    <meta name="description" content="Protect your PDFs with ease! Our powerful PDF watermarking tool allows you to add custom watermarks, copyright notices, and logos to safeguard your documents. Preserve your ownership and enhance security effortlessly">
+    <script src="JS/pdf-lib.min.js"></script>
+    <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script src="https://unpkg.com/downloadjs@1.4.7"></script>
+    <script src="https://unpkg.com/pdf-lib@1.11.0"></script>
+    <script src="https://unpkg.com/pdf-lib@1.14.0"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="https://unpkg.com/pdf-lib@1.7.0"></script>
+    <script src="pdf.min.js"></script>
+    <script src="pdf.worker.min.js"></script>
+    <script src="https://unpkg.com/pdf-lib"></script>
+    <link href="../Pages/Css/StyleSheet1.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Watermark</title>
+    <style>
+
+        .span-hide {
+            display: none;
+        }
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: flex-start;
+            width: 95%;
+        }
+
+        .drop-area {
+            width: 130px;
+            height: 50px;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            text-align: center;
+            padding: 40px;
+            cursor: pointer;
+        }
+
+            .drop-area.highlight {
+                border-color: #009688;
+            }
+
+        .preview-container {
+            /* border: 1px solid #ccc; */
+            padding: 10px;
+            width: 50.5%;
+            border-left: 3px dashed;
+        }
+
+        .preview {
+            width: 100%;
+            height: 600px;
+        }
+
+
+        @media (max-width: 768px) {
+            .cpreview-container {
+                width: auto;
+            }
+        }
+
+
+        /* Styles for the range input */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 74%;
+            height: 10px;
+            background-color: #e9e9e9;
+            /* border-radius: 5px; */
+            /* outline: none; */
+            padding: 0;
+            margin: 0;
+        }
+
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 10px;
+                height: 20px;
+                background-color: #fff;
+                border: 2px solid #999;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background-color 0.2s, transform 0.2s;
+            }
+
+            input[type="range"]::-moz-range-thumb {
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+                border: 2px solid #999;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background-color 0.2s, transform 0.2s;
+            }
+
+                input[type="range"]::-webkit-slider-thumb:hover,
+                input[type="range"]::-moz-range-thumb:hover {
+                    background-color: #999;
+                }
+
+                input[type="range"]::-webkit-slider-thumb:active,
+                input[type="range"]::-moz-range-thumb:active {
+                    transform: scale(1.2);
+                }
+
+            /* Style the range track */
+            input[type="range"]::-webkit-slider-runnable-track {
+                height: 4px;
+                background-color: #ccc;
+                border-radius: 2px;
+            }
+
+            input[type="range"]::-moz-range-track {
+                height: 4px;
+                background-color: #ccc;
+                border-radius: 2px;
+            }
+
+
+        /* Style for the color input */
+        input[type="color"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 4%;
+            height: 13px;
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+            /* Remove default color input arrow */
+            input[type="color"]::-webkit-color-swatch-wrapper {
+                padding: 0;
+            }
+
+            /* Style the color input swatch */
+            input[type="color"]::-webkit-color-swatch {
+                border: none;
+                border-radius: 4px;
+            }
+
+        select {
+            appearance: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            font-size: 16px;
+            outline: none;
+            cursor: pointer;
+        }
+
+            select:hover {
+                border-color: #aaa; /* Change this to your desired hover color */
+            }
+
+            select:focus {
+                border-color: #ff7f50; /* Change this to your desired focus color */
+                box-shadow: 0 0 5px rgba(255, 127, 80, 0.5); /* Change this to your desired focus box shadow */
+            }
+
+            select option {
+                background-color: #fff;
+                color: #333;
+            }
+
+        button {
+            display: inline-block;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            background-color: #E36587; /* Change this to your desired background color */
+            color: #fff; /* Change this to your desired text color */
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #ff6347; /* Change this to your desired hover background color */
+            }
+
+            button:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5); /* Change this to your desired focus box shadow */
+            }
+
+            button:active {
+                transform: translateY(1px);
+            }
+
+        .download-button-watermark {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: green; /* Change this to your desired background color */
+            color: #fff; /* Change this to your desired text color */
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .download-button-watermark:hover {
+                background-color: greenyellow; /* Change this to your desired hover background color */
+            }
+
+            .download-button-watermark:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(255, 127, 80, 0.5); /* Change this to your desired focus box shadow */
+            }
+
+            .download-button-watermark:active {
+                transform: translateY(1px);
+            }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@3.0.0/dist/pdf-lib.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a  href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
+        <p style="font-size: 110%;">PDF Watermarker</p>
+        <a style="border-bottom: 2px solid;" class="header-links" href="/">Home</a>
+      </div><br>
+
+  <div style="width: 95%;" class="container">
+
+    <div class="controls">
+        <div>
+            <input class="input" placeholder="Enter WaterMark" type="text" id="watermark-text">
+          </div><br>
+
+    <div>
+      <label for="opacity-range">Opacity:</label>
+      <input type="range" id="opacity-range" min="0" max="1" step="0.1" value="0.5">
+      <span class="span-hide" id="opacity-value"></span>
+    </div><br>
+
+    <div>
+      <label for="position-x-range">Position X:</label>
+      <input type="range" id="position-x-range" min="0" max="100" step="1">
+      <span class="span-hide" id="position-x-value"></span>
+    </div><br>
+
+    <div>
+      <label for="position-y-range">Position Y:</label>
+      <input type="range" id="position-y-range" min="0" max="100" step="1">
+      <span class="span-hide" id="position-y-value"></span>
+    </div><br>
+
+    <div>
+      <label for="size-range">Size:</label>
+      <input type="range" id="size-range" min="10" max="100" step="5" value="50">
+      <span class="span-hide" id="size-value"></span>
+    </div><br>
+    <div>
+        <label for="orientation-select">Orientation:</label>
+        <select id="orientation-select">
+          <option value="horizontal">Horizontal</option>
+          <option value="vertical">Vertical</option>
+          <option value="diagonal">Diagonal</option>
+        </select>
+      </div>
+
+    <div>
+      <label for="color-input">Color:</label>
+      <input type="color" id="color-input" value="#000000">
+    </div>
+
+    <div>
+        <label for="hide-drop-area">Hide Drop Area:</label>
+        <input type="checkbox" id="hide-drop-area" onchange="toggleDropArea()">
+      </div><br>
+
+    <div class="drop-area" id="drop-area" onclick="selectFile(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+      <span>Drop PDF File Here</span>
+
+    </div><br>
+
+    <button style="display: inline-block;" onclick="refreshPage()">Refresh</button><br><br>
+
+    
+   
+
+  
+  </div> 
+
+  <div class="preview-container">
+      <div id="preview" class="preview"></div><br>
+      <b> <a class="download-button-watermark"  id="download-link" style="display: none;">Download</a></b>
+      
+    </div>
+</div>  <br>
+
+<div class="container-infobox-left">
+  <h1>PDF Watermark - Instruction Manual</h1>
+
+  <h2>Description</h2>
+  <p>
+    The PDF Watermark tool allows you to easily add a watermark to your PDF files. A watermark is a visible or transparent text that is usually added to documents for various purposes, such as branding, document classification, or copyright protection. With this tool, you can customize the watermark's text, opacity, orientation, position, size, and color to suit your specific requirements.
+  </p>
+
+  <h2>Usage Instructions</h2>
+  <p>
+    Follow these steps to add a watermark to your PDF:
+  </p>
+
+  <div class="feature-item">
+    <h3>Step 1: Upload a PDF File</h3>
+    <p>
+      To get started, you have two options:
+    </p>
+    <ul>
+      <li>
+        <strong>Option A:</strong> Drag and drop a PDF file into the designated drop area. The PDF file will be loaded into the tool automatically.
+      </li>
+      <li>
+        <strong>Option B:</strong> Click on the drop area to open the file picker dialog, then select the desired PDF file from your local system.
+      </li>
+    </ul>
+    <p class="note">
+      Note: If you prefer to use the file picker only, you can hide the drop area by checking the "Hide Drop Area" checkbox.<br>
+      Note: If the PDF is over 20 pages, the tool will take a longer time to load the preview. A PDF with more than 1000 pages will take about 15 seconds to load.
+    </p>
+  </div>
+
+  <div class="feature-item">
+    <h3>Step 2: Configure Watermark Settings</h3>
+    <p>
+      After uploading the PDF file, you can customize the watermark by adjusting the following settings:
+    </p>
+    <ul>
+      <li>
+        <strong>Watermark Text:</strong> Enter the text you want to use as the watermark. This could be your company name, document title, or any other relevant information.
+      </li>
+      <li>
+        <strong>Opacity:</strong> Adjust the opacity of the watermark to control its transparency. A higher opacity value (closer to 1) makes the watermark more visible, while a lower value (closer to 0) makes it more transparent.
+      </li>
+      <li>
+        <strong>Orientation:</strong> Choose the orientation of the watermark from the dropdown menu. You can select "Horizontal," "Vertical," or "Diagonal" to set the direction of the watermark text.
+      </li>
+      <li>
+        <strong>Position X and Y:</strong> Use the sliders to determine the horizontal (X) and vertical (Y) position of the watermark on the PDF page. The position is represented as a percentage of the page width and height, where 0% is the left/top edge and 100% is the right/bottom edge.
+      </li>
+      <li>
+        <strong>Size:</strong> Adjust the size of the watermark using the slider. The size is represented as a percentage, with 100% being the original size.
+      </li>
+      <li>
+        <strong>Color:</strong> Choose the color of the watermark text using the color picker. You can select any color that suits your branding or design requirements.
+      </li>
+    </ul>
+  </div>
+
+  <div class="feature-item">
+    <h3>Step 3: Preview the Watermarked PDF</h3>
+    <p>
+      As you adjust the watermark settings, the preview section will display a real-time preview of the watermarked PDF. This allows you to visualize the watermark's appearance and position before proceeding to the final step.
+    </p>
+  </div>
+
+  <div class="feature-item">
+    <h3>Step 4: Download the Watermarked PDF</h3>
+    <p>
+      Once you are satisfied with the watermark configuration, click on the "Download Watermarked PDF" link. The watermarked PDF file will be downloaded to your local system with the filename "output.pdf."
+    </p>
+  </div>
+
+  <div class="feature-item">
+    <h3>Additional Features</h3>
+    <ul>
+      <li>
+        <strong>Refresh:</strong> If you wish to start over or change the watermark settings, click the "Refresh" button. This will clear all settings, reset the input fields, hide the preview, and allow you to upload a new PDF file.
+      </li>
+    </ul>
+  </div>
+
+  <h2>Browser Compatibility</h2>
+  <p>
+    The PDF Watermark tool is compatible with modern web browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari. Ensure that you are using an up-to-date browser version for optimal performance and functionality.
+  </p>
+
+  <h2>Feedback and Support</h2>
+  <p>
+    We welcome your feedback and suggestions to improve the PDF Watermark tool. If you encounter any issues or need assistance, please contact our support team at dabuchanan0325@gmail.com. We are here to help and provide a seamless experience with our tool.
+  </p>
+</div>
+
+</div>
+<hr  width="70%">
+<!-- Footer section starts here -->
+<footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+  <div class="footer-container" style="display: flex; justify-content: space-between;">
+    <!-- Info Div -->
+    <div class="info-div" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+      
+      
+    </div>
+
+    <!-- Other Tools Div -->
+    <div class="other-tools-div" style="flex: 1; max-width: 400px;">
+        
+       
+        
+        
+      <p style="display: inline-block">&copy; 2024 Xfinity Tools. All rights reserved.</p>
+    </div>
+
+    <!-- Empty Div -->
+    <div class="empty-div" style="flex: 1;">
+      
+    </div>
+  </div>
+</footer>
+<!-- Footer section ends here -->
+
+<script src="JS/JavaS4.js"></script>
+</body>
+</html>

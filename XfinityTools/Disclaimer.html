@@ -1,9 +1,7 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Xfinity Tools is a comprehensive collection of web-based tools designed to simplify various tasks and enhance your productivity. Our aim is to provide you with a one-stop destination for quick and efficient online utilities.
-    Whether you need to edit images, convert files, manipulate data, or process text, Xfinity Tools has you covered.">
+    <meta name="description" content="Xfinity Tools is a comprehensive collection of web-based tools designed to simplify various tasks and enhance your productivity. Our aim is to provide you with a one-stop destination for quick and efficient online utilities. Whether you need to edit images, convert files, manipulate data, or process text, Xfinity Tools has you covered.">
     <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
     <meta name="google-site-verification" content="_tlvtjqFT1OiTJbgwrthCi6VKRpfT5n7QSbKtX_dF88" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,43 +9,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-
-
-    <!-- Other -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./Pages/JS/JavaS1.js"></script>
+    <script src="./Pages/JS/HeaderTime.js"></script>
     <script src="./Pages/JS/DropDownMenu.js"></script>
     <link href="./Pages/Css/Bootstrap.css" rel="stylesheet" />
     <link href="./Pages/Css/index-style.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
-
     <title>Xfinity Tools - Free Online Tool Suite</title>
 </head>
 <body>
     <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
         <a href="index.html"><h1 style="margin-left: 50px;">Xfinity Tools Disclaimer</h1></a>
+        <span id="currentDateTime" style="margin-left: 20px; "></span>
+    </div>
 
+    <div style="padding: 30px; margin: 0 auto; margin-left: 40px; max-width: 800px;">
+        <section>
+            <h2>Disclaimer</h2>
+            <p>
+                Welcome to Xfinity Tools! Please carefully read our disclaimer before using our services.
+            </p>
+            <p>
+                Xfinity Tools is a free suite of web-based tools designed to simplify your tasks and improve productivity. These tools are powered purely by JavaScript and HTML, and no server-side technology is used to process or store any data. We do not collect, store, or process personal data in any way. Our tools are fully client-side, which means that everything is handled directly in your browser.
+            </p><br />
+            <p>
+                <strong>Important Notes:</strong>
+            </p>
+            <ul>
+                <li>No personal information is stored or processed on our site. Xfinity Tools does not use cookies or sessions to collect any personal data.</li>
+                <li>The tools do not save any files after processing. Once you complete a task using our tools, no file is stored or retained on our servers or any third-party servers.</li>
+                <li>The site does not access, modify, or store any files on your device without your explicit interaction.</li>
+                <li>All files processed by the tools are handled solely within your browser, and we do not retain, share, or collect any data related to them.</li><br />
+                <li>
+                    <strong>Advertising:</strong> This website may display advertisements to help keep our services free. Ads are served by third-party providers, and Xfinity Tools has no control over the content or behavior of such ads. We recommend exercising caution when interacting with them.
+                </li>
+            </ul>
+            <p>
+                By using Xfinity Tools, you agree to this disclaimer and acknowledge that all actions performed on this site are solely at your own risk. We make no warranties regarding the accuracy or reliability of the tools provided.
+            </p><br />
+            <p>
+                If you have any concerns or questions regarding the use of the tools or the information we provide, please contact the developer at
+                <a style="color:blue;" href="mailto:dabuchanan0325@gmail.com">dabuchanan0325@gmail.com</a>.
+            </p><br />
 
-
-
-
-        <div class="dropdown" style="position: relative; display: inline-block; margin-right: 40px;">
-            <button class="dropbtn" style="background-color: transparent; border: none; font-size: 18px; cursor: pointer;">
-            </button>
-            <div class="dropdown-content" style="display: none; position: absolute; background-color: white; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); min-width: 150px; z-index: 1;">
-                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Profile</a>
-                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Settings</a>
-                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Logout</a>
+            <div style="margin-top: 20px;">
+                <a href="Pages/Dashboards/Dashboard.html" class="btn btn-primary btn-md" style="margin-right: 10px;">Explore All Tools &raquo;</a>
+                <a href="/" class="btn btn-secondary btn-md" style="margin-right: 10px;">Go Back &raquo;</a>
             </div>
-        </div>
-    </div>
-
-    <div style="padding: 30px; margin: 0 auto; margin-left: 40px;">
-
-
+            <br />
+        </section>
 
     </div>
-
 
     <!-- Footer -->
     <hr style="width:100%; align-items:end; border:.05px solid black;" />
@@ -56,7 +69,29 @@
         <script>
             document.getElementById('currentYear').textContent = new Date().getFullYear();
         </script>
-
     </footer>
 </body>
 </html>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        const date = now.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        const time = now.toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false // Use 24-hour format
+        });
+        document.getElementById('currentDateTime').textContent = `${date}, ${time}`;
+    }
+
+    // Update the date and time immediately and then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>

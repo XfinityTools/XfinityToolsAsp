@@ -225,6 +225,7 @@
     <Content Include="Tools\Zipfile.html" />
     <Content Include="Wikis\ViewWikis.html" />
     <Content Include="Images\Hello World" />
+    <Content Include="xfinitysitemap.xml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

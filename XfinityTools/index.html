@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Xfinity Tools is a comprehensive collection of web-based tools designed to simplify various tasks and enhance your productivity. Our aim is to provide you with a one-stop destination for quick and efficient online utilities.
-    Whether you need to edit images, convert files, manipulate data, or process text, Xfinity Tools has you covered.">
+    <meta name="description" content="Xfinity Tools is a comprehensive collection of web-based tools designed to simplify various tasks and enhance your productivity. Our aim is to provide you with a one-stop destination for quick and efficient online utilities. Whether you need to edit images, convert files, manipulate data, or process text, Xfinity Tools has you covered.">
     <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
     <meta name="google-site-verification" content="_tlvtjqFT1OiTJbgwrthCi6VKRpfT5n7QSbKtX_dF88" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,20 +25,7 @@
 <body>
     <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
         <a href="index.html"><h1 style="margin-left: 50px;">Xfinity Tools</h1></a>
-
-
-        
-       
-
-        <div class="dropdown" style="position: relative; display: inline-block; margin-right: 40px;">
-            <button class="dropbtn" style="background-color: transparent; border: none; font-size: 18px; cursor: pointer;">
-            </button>
-            <div class="dropdown-content" style="display: none; position: absolute; background-color: white; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); min-width: 150px; z-index: 1;">
-                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Profile</a>
-                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Settings</a>
-                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Logout</a>
-            </div>
-        </div>
+        <span id="currentDateTime" style="margin-left: 20px; "></span>
     </div>
 
     <div style="padding: 30px; margin: 0 auto; margin-left: 40px;">
@@ -47,17 +33,44 @@
         <section>
             <h1>Welcome!</h1>
             <p class="lead">
-                Xfinity Tools is a comprehensive collection of web-based tools designed to simplify various tasks and enhance your productivity. Our aim is to provide you with a one-stop destination for quick and efficient online utilities. Whether you need to edit images, convert files, manipulate data, or process text, Xfinity Tools has you covered.
+                Xfinity Tools is your ultimate destination for productivity-enhancing online utilities. Whether you need to edit images, convert files, organize data, or process text, our suite of tools is here to assist you.
             </p>
 
-            <p class="lead">
-                Xfinity Tools offers a wide range of tools across different categories, ensuring that you have the necessary tools to accomplish your digital tasks effectively. Our tools are meticulously crafted to provide a seamless and intuitive experience. They are accessible from any device with an internet connection, allowing you to utilize them conveniently wherever you are.
+            <h2>Our Popular Tools</h2>
+            <ul>
+                <li><strong>File Converter:</strong> Quickly convert files between different formats, including PDFs, images, and documents.</li>
+
+                <li><strong>Hashing Generator:</strong> Securely hash your text with algorithms like SHA-256 and MD5.</li>
+
+                <li><strong>Sentence Capitalization Camel Case Converter:</strong> Easily convert text to sentence case, camel case, or capitalize sentences for better readability or coding purposes.</li>
+
+                <li><strong>Merge PDF:</strong> Combine multiple PDF files into a single document effortlessly.</li>
+
+                <li><strong>PDF Watermarking:</strong> Add customized watermarks to your PDF files for branding or security purposes.</li>
+            </ul>
+            <br />
+
+
+            <h2>Why Choose Xfinity Tools?</h2>
+            <p>
+                We provide user-friendly, fast, and reliable tools accessible from any device. No downloads or installations are required—just open your browser and start working.
             </p>
 
-            <a href="Pages/Dashboards/Dashboard.html" style="display:inline-block;" class="btn btn-primary btn-md">All Tools &raquo;</a>
-            <!--<a href="Wikis/ViewWikis.html" style="display:inline-block;" class="btn btn-primary btn-md">View Wiki &raquo;</a>-->
-            <a href="About.html" style="display:inline-block;" class="btn btn-primary btn-md">About &raquo;</a>
-            <a href="Disclaimer.html" style="display:inline-block;" class="btn btn-primary btn-md">Disclaimer &raquo;</a>
+            <h2>How It Works</h2>
+            <p>
+                Each tool comes with step-by-step instructions, ensuring you get the results you need without hassle. Learn more about each tool by exploring our <a href="Pages/Dashboards/Dashboard.html">All Tools</a> page.
+            </p>
+
+            <div style="margin-top: 20px;">
+                <a href="Pages/Dashboards/Dashboard.html" class="btn btn-primary btn-md" style="margin-right: 10px;">Explore All Tools &raquo;</a>
+                <a href="About.html" class="btn btn-secondary btn-md" style="margin-right: 10px;">About Us &raquo;</a>
+                <a href="Disclaimer.html" class="btn btn-secondary btn-md">Disclaimer &raquo;</a>
+            </div><br />
+
+            <h3>Join Our Community</h3>
+            <p>
+                Become part of a growing community of users who trust Xfinity Tools for their everyday needs. Stay up-to-date with our latest tools and features by subscribing to our newsletter.
+            </p>
         </section>
 
     </div><br /><br /><br />
@@ -68,7 +81,7 @@
     <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
         <p style="display: inline-block;">&copy; <span id="currentYear"></span> - XfinityTools</p>
         <!--<a style="float:right; display:inline-block;" href="ToolList.html">Tools List</a>-->
-        <a style="float:left; display:inline-block;" href="Sitemap.xml">SiteMap</a><br />
+        <a style="float:left; display:inline-block;" href="xfinitysitemap.xml">SiteMap</a><br />
         
         <script>
             document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -81,14 +94,25 @@
 
 <!--Other Scripts-->
 <script>
-    (function (xpwm) {
-        var d = document,
-            s = d.createElement('script'),
-            l = d.scripts[d.scripts.length - 1];
-        s.settings = xpwm || {};
-        s.src = "\/\/deafeningphone.com\/bUXIV.sEdmGQlh0\/YsWbdOibYfW\/5wuLZTXlIS\/nebmp9Au\/ZbUElOkVP_TjQf3TOzDKIHxgOWTRklt\/NSDuca4sMdj\/IYw\/M\/AE";
-        s.async = true;
-        s.referrerPolicy = 'no-referrer-when-downgrade';
-        l.parentNode.insertBefore(s, l);
-    })({})
+    
+    function updateDateTime() {
+        const now = new Date();
+        const date = now.toLocaleDateString('en-US', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        const time = now.toLocaleTimeString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false // Use 24-hour format
+        });
+        document.getElementById('currentDateTime').textContent = `${date}, ${time}`;
+    }
+
+    // Update the date and time immediately and then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
 </script>

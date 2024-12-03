@@ -2,133 +2,118 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../Images/Untitled design.png">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Pacifico&family=Teko&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6760354428989736" crossorigin="anonymous"></script>
     <link href="../Pages/Css/StyleSheet1.css" rel="stylesheet" />
     <meta name="description" content="Free Online tool that allows you to compress multiple files using GZIP compression">
-    <script src="../Pages/JS/JavaS5.js"></script>
+    <script src="../Pages/JS/JavaS2.js"></script>
+    <script src="../Pages/JS/JavaS3.js"></script>
     <title>File Compression</title>
 </head>
 <body>
-    <div class="header">
-        <a href="../index.html" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
-        <p style="font-size: 110%;">File Compression Generater</p>
-    </div><br>
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/"><h1 style="margin-left: 50px;">Xfinity Tools</h1></a>
 
 
-      <div class="container">
-      
+        <a style="margin-left:24%;" href="../Tools/Excel-PDF.html">File Compression</a>
+        <a style="margin-left:35%;" href="../Pages/Dashboards/Dashboard2.html">Back</a>
+        
+        </div>
+    
+
+
+    <div class="container">
+
         <div class="main-content">
 
-        <div id="dropArea" style="border: 2px dashed #ccc; cursor: pointer;">
-        <p>Drag and drop files here, or click to select files.</p>
-        <input type="file" id="fileInput" style="display: none;" multiple />
-    </div>
-    <!-- <button onclick="compressFile()">Compress File</button> -->
+            <div id="dropArea" style="border: 2px dashed #ccc; cursor: pointer;">
+                <p>Drag and drop files here, or click to select files.</p>
+                <input type="file" id="fileInput" style="display: none;" multiple />
+            </div>
+            <!-- <button onclick="compressFile()">Compress File</button> -->
 
-    <div style="margin: auto;">
-       <h3>Selected Files:</h3>
-    <ul style="border: transparent; background-color: transparent; margin: auto;" id="selectedFilesList"></ul>
-    <a class="download-button" id="downloadLink" style="display: none;" download>Download</a> 
-    </div>
-    
+            <div style="margin: auto;">
+                <h3>Selected Files:</h3>
+                <ul style="border: transparent; background-color: transparent; margin: auto;" id="selectedFilesList"></ul>
+                <a class="download-button" id="downloadLink" style="display: none;" download>Download</a>
+            </div>
+
         </div>
 
-      </div><br>
+    </div><br>
 
-      <div class="container-infobox-left">
+    <div class="container-infobox-left">
 
         <h1>File Compression Tool - Instructions</h1>
-    <p>
-        Welcome to the File Compression Tool! This tool allows you to compress multiple files using GZIP compression.
-        Follow the instructions below to compress your files and download the compressed versions.
-    </p>
+        <p>
+            Welcome to the File Compression Tool! This tool allows you to compress multiple files using GZIP compression.
+            Follow the instructions below to compress your files and download the compressed versions.
+        </p>
 
-php
+        php
 
-<h2>Instructions:</h2>
-<ol>
-    <li>Drag and Drop or Manual File Selection:</li>
-    <p>
-        You can compress files by either dragging and dropping them onto the drop area or manually selecting them
-        by clicking on the area. The drop area is highlighted with a dashed border for easy identification.
-    </p>
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Drag and Drop or Manual File Selection:</li>
+            <p>
+                You can compress files by either dragging and dropping them onto the drop area or manually selecting them
+                by clicking on the area. The drop area is highlighted with a dashed border for easy identification.
+            </p>
 
-    <li>Select Files:</li>
-    <p>
-        After dragging files or clicking on the drop area to select files, you will see a list of the selected files
-        displayed below the drop area. Ensure you have chosen all the files you want to compress before proceeding
-        to the next step.
-    </p>
+            <li>Select Files:</li>
+            <p>
+                After dragging files or clicking on the drop area to select files, you will see a list of the selected files
+                displayed below the drop area. Ensure you have chosen all the files you want to compress before proceeding
+                to the next step.
+            </p>
 
-    <li>Compress Files:</li>
-    <p>
-        Once you have selected the files you wish to compress, click on the "Compress Files" button. The tool will
-        then begin compressing the selected files using GZIP compression. Please be patient as the compression
-        process may take some time, especially for large files or multiple files.
-    </p>
+            <li>Compress Files:</li>
+            <p>
+                Once you have selected the files you wish to compress, click on the "Compress Files" button. The tool will
+                then begin compressing the selected files using GZIP compression. Please be patient as the compression
+                process may take some time, especially for large files or multiple files.
+            </p>
 
-    <li>Download Compressed Files:</li>
-    <p>
-        After the compression process is complete, a download link will appear. Click on the link to download the
-        compressed files as a ZIP archive. The ZIP archive will contain the compressed versions of the selected files.
-    </p>
-</ol>
+            <li>Download Compressed Files:</li>
+            <p>
+                After the compression process is complete, a download link will appear. Click on the link to download the
+                compressed files as a ZIP archive. The ZIP archive will contain the compressed versions of the selected files.
+            </p>
+        </ol>
 
-<h2>Notes:</h2>
-<ul>
-    <li>
-        Please note that file compression in the browser can be resource-intensive, and large files or a large
-        number of files may take longer to compress.
-    </li>
-    <li>
-        The File Compression Tool uses the GZIP compression algorithm to reduce file sizes. GZIP is a widely used
-        compression method that is supported by many applications and systems.
-    </li>
-    <li>
-        Compression support can vary across different browsers and their versions. If you encounter any issues
-        during the compression process, consider updating your browser to the latest version or using a different
-        browser that supports the necessary compression features.
-    </li>
-    <li>
-        For the best compression results and user experience, we recommend using the latest version of a modern
-        web browser.
-    </li>
-</ul>
-      </div>
-
-      <hr  width="70%">
-<!-- Footer section starts here -->
-<footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
-  <div class="footer-container" style="display: flex; justify-content: space-between;">
-    <!-- Info Div -->
-    <div class="info-div" style="flex: 1; display: flex; flex-direction: column; align-items: center;">
-      
-      
+        <h2>Notes:</h2>
+        <ul>
+            <li>
+                Please note that file compression in the browser can be resource-intensive, and large files or a large
+                number of files may take longer to compress.
+            </li>
+            <li>
+                The File Compression Tool uses the GZIP compression algorithm to reduce file sizes. GZIP is a widely used
+                compression method that is supported by many applications and systems.
+            </li>
+            <li>
+                Compression support can vary across different browsers and their versions. If you encounter any issues
+                during the compression process, consider updating your browser to the latest version or using a different
+                browser that supports the necessary compression features.
+            </li>
+            <li>
+                For the best compression results and user experience, we recommend using the latest version of a modern
+                web browser.
+            </li>
+        </ul>
     </div>
 
-    <!-- Other Tools Div -->
-    <div class="other-tools-div" style="flex: 1; max-width: 400px;">
-      
-     
-      <p style="display: inline-block">&copy; 2024 Xfinity Tools. All rights reserved.</p>
-    </div>
-
-    <!-- Empty Div -->
-    <div class="empty-div" style="flex: 1;">
-      
-    </div>
-  </div>
-</footer>
-<!-- Footer section ends here -->
-
-      <script>
-
-      </script>
-      
+    <hr width="70%">
+    <!-- Footer section starts here -->
+    <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">
+        <div class="footer-container" style="display: flex; justify-content:center;">
+            <p style="display: inline-block; text-align:center;">&copy; 2024 Xfinity Tools. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer section ends here -->
 
 </body>
 

@@ -1,3 +1,16 @@
+#hashResult {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    background: #eafbea;
+    color: #333;
+    font-weight: bold;
+    word-wrap: break-word; /* Ensures long text wraps inside the container */
+    overflow-wrap: break-word; /* Adds compatibility for older browsers */
+    width: 100%; /* Ensures it doesn't overflow horizontally */
+    box-sizing: border-box; /* Includes padding in width calculations */
+}
 
 
 

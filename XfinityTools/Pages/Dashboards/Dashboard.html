@@ -4,7 +4,7 @@
 <head>
     <meta name="description" content="Xfinity Tools is a comprehensive collection of web-based tools designed to simplify various tasks and enhance your productivity. Our aim is to provide you with a one-stop destination for quick and efficient online utilities.
     Whether you need to edit images, convert files, manipulate data, or process text, Xfinity Tools has you covered.">
-    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../Images/favicon.ico">
     <meta name="google-site-verification" content="_tlvtjqFT1OiTJbgwrthCi6VKRpfT5n7QSbKtX_dF88" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
 
     <title>Xfinity Tools - Tools Dashboard</title>
 </head>
-<body>
+<body style="border-left: 5px solid #e60340;">
     <div class="header" style="display: flex; justify-content: space-between; ">
         <a href="../../index.html"><h1 style="margin-left: 50px;">Xfinity Tools</h1></a>
 
@@ -48,14 +48,18 @@
                 onchange="navigateToPage()">
             <option value="1">Page 1</option>
             <option value="2">Page 2</option>
+            <option value="3">Tools List</option>
             <!--<option value="3">Page 3</option>
-            <option value="4">Page 4</option>-->
+    <option value="4">Page 4</option>-->
         </select>
     </div>
 
 
     <div class="row">
         <section id="FileZipper" class="col-md-4 card-dash">
+            <div>
+                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+            </div>
             <h2>File Zipper</h2>
             <p>
                 Creating a zip file involves compressing one or more files or directories into a single archive file with the ".zip" extension. The process of creating a zip file helps reduce
@@ -67,6 +71,9 @@
         </section>
 
         <section id="PNGtoJPEG" class="col-md-4 card-dash">
+            <div>
+                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+            </div>
             <h2>PNG to JPEG</h2>
             <p>
                 Converting a PNG file to JPEG involves transforming the image file format from PNG (Portable Network Graphics) to JPEG (Joint Photographic Experts Group).
@@ -78,6 +85,9 @@
         </section>
 
         <section id="WebptoPNG" class="col-md-4 card-dash">
+            <div>
+                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+            </div>
             <h2>WebP to PNG</h2>
             <p>
                 Converting a WebP file to PNG involves changing the image file format from WebP (a modern image format developed by Google) to PNG (Portable Network Graphics).
@@ -92,6 +102,9 @@
 
     <div class="row">
         <section id="PNGtoWebP" class="col-md-4 card-dash">
+            <div>
+                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+            </div>
             <h2>PNG to WebP</h2>
             <p>
                 Converting a PNG to WebP file involves changing the image file format from PNG (Portable Network Graphics) to WebP (a modern image format developed by Google).
@@ -103,6 +116,9 @@
         </section>
 
         <section id="SentenceCapitalization" class="col-md-4 card-dash">
+            <div>
+                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+            </div>
             <h2>Sentence Capitalization</h2>
             <p>
                 When an entire sentence is capitalized, it means that all the letters in the sentence are written in uppercase, without any lowercase letters.
@@ -114,6 +130,9 @@
         </section>
 
         <section id="CamelCaseConversion" class="col-md-4 card-dash">
+            <div>
+                <img src="../../Images/Untitled design.png" alt="File Zipper" width="20">
+            </div>
             <h2>Camel Case Conversion</h2>
             <p>
                 Camel case conversion is a naming convention used in computer programming and other contexts where multiple words are combined to form a single identifier.
@@ -154,7 +173,7 @@
                 window.location.href = "Dashboard2.html";
                 break;
             case "3":
-                window.location.href = "page3.html";
+                window.location.href = "ToolList.html";
                 break;
             case "4":
                 window.location.href = "page4.html";

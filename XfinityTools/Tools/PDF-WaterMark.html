@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://xfinitytools.github.io/Pages/PDF-WaterMark" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../Images/Untitled design.png">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect for faster font loading -->
@@ -38,14 +38,29 @@
 
 
     <title>PDF Watermark</title>
-        <script src="https://cdn.jsdelivr.net/npm/pdf-lib@3.0.0/dist/pdf-lib.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@3.0.0/dist/pdf-lib.js"></script>
 </head>
 <body>
-    <div class="header">
-        <a  href="/" style=" font-family: 'Pacifico', cursive; font-size: 250%;">Xfinity Tools</a>
-        <p style="font-size: 110%;">PDF Watermarker</p>
-        <a style="border-bottom: 2px solid;" class="header-links" href="/">Home</a>
-      </div><br>
+    <div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="/"><h1 style="margin-left: 50px;">Xfinity Tools</h1></a>
+
+
+        <a style="margin-left:29%;" href="../Tools/Excel-PDF.html">PDF Watermarker</a>
+        <a style="margin-left:30%;" href="../Pages/Dashboards/Dashboard2.html">Back</a>
+
+
+
+
+        <div class="dropdown" style="position: relative; display: inline-block; margin-right: 40px;">
+            <button class="dropbtn" style="background-color: transparent; border: none; font-size: 18px; cursor: pointer;">
+            </button>
+            <div class="dropdown-content" style="display: none; position: absolute; background-color: white; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); min-width: 150px; z-index: 1;">
+                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Profile</a>
+                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Settings</a>
+                <a href="#" style="display: block; padding: 10px; text-decoration: none; color: black;">Logout</a>
+            </div>
+        </div>
+    </div>
 
   <div style="width: 95%;" class="container">
 
@@ -209,7 +224,7 @@
   </p>
 </div>
 
-</div>
+
 <hr  width="70%">
 <!-- Footer section starts here -->
 <footer style=" padding: 20px; text-align: center; font-size: 14px; color: #000000;">

@@ -64,12 +64,16 @@
 
 
     <!-- Footer -->
-    <hr style="width:100%; align-items:end; border:.05px solid black;" />
+    <hr style="width: 100%; align-items: end; border: 1px solid #e60340;" />
     <footer style="padding: 15px; margin-top: 30px; margin-left: 30px;">
-        <p>&copy; <span id="currentYear"></span> - XfinityTools</p>
+        <p style="display: inline-block;">&copy; <span id="currentYear"></span> - XfinityTools</p>
+        <!--<a style="float:right; display:inline-block;" href="ToolList.html">Tools List</a>-->
+        <a style="float:left; display:inline-block;" href="Sitemap.xml">SiteMap</a><br />
+        
         <script>
             document.getElementById('currentYear').textContent = new Date().getFullYear();
         </script>
+
 
     </footer>
 </body>
